@@ -11,14 +11,25 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.vue$/, loader: 'vue' }
+            {
+                test: /\.vue$/, loader: 'vue'
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel'
+            }
         ]
+    },
+    babel: {
+        presets: ['es2015'],
+        plugins: ['transform-runtime']
     },
     devtool: 'inline-source-map',
     plugins: [
         // new webpack.optimize.UglifyJsPlugin(),
         new CopyWebpackPlugin([
-            { from: './src/index.html' }
+            {from: './src/index.html'}
         ])
     ]
 
