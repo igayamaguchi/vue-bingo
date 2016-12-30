@@ -1,10 +1,19 @@
 <template>
     <div>
         <result></result>
-        <history></history>
         <controller></controller>
+        <history></history>
     </div>
 </template>
+<style>
+    body {
+        text-align: center;
+    }
+    div {
+        margin: 0;
+        padding: 0;
+    }
+</style>
 <script>
     import Result from './components/result.vue';
     import History from './components/history.vue';

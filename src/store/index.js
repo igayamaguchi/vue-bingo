@@ -7,7 +7,6 @@ import history from './modules/history';
 
 Vue.use(Vuex);
 
-console.log(mutations);
 const state = {
     remainingNumber: allRange(75),
     nowShuffle: false

@@ -1,15 +1,21 @@
 <template>
-    <div class="row text-center">
-        <div v-if="nowShuffle" class="col-xs-12">
+    <div class="result">
+        <div v-if="nowShuffle" class="now-shuffle">
             シャッフル中
         </div>
-        <div v-else class="col-xs-12">
+        <div v-else class="result-number">
             {{ resultNumber }}
         </div>
     </div>
 </template>
 <style>
-
+    .result {
+        height: 300px;
+        line-height: 300px;
+    }
+    .result-number {
+        font-size: 200px;
+    }
 </style>
 <script>
     export default{
