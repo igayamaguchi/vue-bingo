@@ -1,17 +1,24 @@
 <template>
     <div class="row text-center">
         <div class="col-xs-12">
-            <button type="button" class="btn btn-primary">START</button>
-            <button type="button" class="btn btn-success">STOP</button>
-            <button type="button" class="btn btn-danger">RESET</button>
+            <button v-if="nowShuffle" @click="stop" type="button" class="btn btn-success">STOP</button>
+            <button v-else @click="start" type="button" class="btn btn-primary">START</button>
         </div>
     </div>
 </template>
 <script>
     export default{
-        data(){
-            return {
-                msg: 'hello vue'
+        methods: {
+            start(){
+                this.$store.commit('start');
+            },
+            stop(){
+                this.$store.commit('stop');
+            }
+        },
+        computed: {
+            nowShuffle(){
+                return this.$store.state.nowShuffle;
             }
         }
     }

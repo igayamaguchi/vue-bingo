@@ -1,7 +1,10 @@
 <template>
     <div class="row text-center">
-        <div class="col-xs-12">
-            5
+        <div v-if="nowShuffle" class="col-xs-12">
+            シャッフル中
+        </div>
+        <div v-else class="col-xs-12">
+            {{ resultNumber }}
         </div>
     </div>
 </template>
@@ -10,12 +13,13 @@
 </style>
 <script>
     export default{
-        name: 'result',
-        data(){
-            return {
-                msg: 'hello vue'
+        computed: {
+            nowShuffle(){
+                return this.$store.state.nowShuffle;
+            },
+            resultNumber(){
+                return this.$store.state.result.resultNumber;
             }
         }
     }
-
 </script>
