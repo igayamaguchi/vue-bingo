@@ -1,17 +1,14 @@
 <template>
-    <div class="row text-center">
-        <div class="col-xs-12">
-            <ul class="list-inline">
-                <li v-for="number in history">{{ number }}</li>
-            </ul>
-        </div>
-    </div>
+    <ul>
+        <li v-for="number in history">{{ number }}</li>
+    </ul>
 </template>
 <style>
     ul {
         margin: 0;
         padding: 0;
     }
+
     li {
         font-size: 32px;
         list-style: none;
@@ -24,6 +21,7 @@
         height: 50px;
         line-height: 50px;
     }
+
     li:first-child {
         background-color: greenyellow;
     }

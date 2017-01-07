@@ -4,7 +4,5 @@ import store from './store';
 
 var app = new Vue({
     store,
-    render(h) {
-        return h(App);
-    }
+    render: h => h(App)
 }).$mount('#app');
