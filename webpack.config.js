@@ -3,7 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
-        'app': './src/bingo.js'
+        'app': './src/app.js'
     },
     output: {
         path: __dirname + '/bin/',
