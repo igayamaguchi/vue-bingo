@@ -1,6 +1,9 @@
 <template>
     <div>
-        <result></result>
+        <result
+            :now-shuffle="$store.state.nowShuffle"
+            :number="$store.state.result.resultNumber"
+        />
         <controller></controller>
         <history></history>
     </div>
@@ -31,6 +34,4 @@
             Controller
         }
     }
-
-
 </script>

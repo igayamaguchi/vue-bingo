@@ -4,7 +4,7 @@
             シャッフル中
         </div>
         <div v-else class="result-number">
-            {{ resultNumber }}
+            {{ number }}
         </div>
     </div>
 </template>
@@ -19,12 +19,14 @@
 </style>
 <script>
     export default{
-        computed: {
-            nowShuffle(){
-                return this.$store.state.nowShuffle;
+        props: {
+            nowShuffle: {
+                type: Boolean,
+                required: false,
             },
-            resultNumber(){
-                return this.$store.state.result.resultNumber;
+            number: {
+                type: Number,
+                required: false,
             }
         }
     }
