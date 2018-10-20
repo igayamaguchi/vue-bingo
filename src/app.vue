@@ -4,7 +4,10 @@
             :now-shuffle="$store.state.nowShuffle"
             :number="$store.state.result.resultNumber"
         />
-        <controller></controller>
+        <controller
+            @start="start"
+            @stop="stop"
+        />
         <history></history>
     </div>
 </template>
@@ -32,6 +35,14 @@
             Result,
             History,
             Controller
+        },
+        methods: {
+            start() {
+                this.$store.commit('start');
+            },
+            stop() {
+                this.$store.commit('stop');
+            }
         }
     }
 </script>

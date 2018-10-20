@@ -11,10 +11,10 @@
     export default{
         methods: {
             start(){
-                this.$store.commit('start');
+                this.$emit('start');
             },
             stop(){
-                this.$store.commit('stop');
+                this.$emit('stop');
             }
         },
         computed: {
